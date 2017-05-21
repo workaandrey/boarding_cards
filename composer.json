@@ -1,0 +1,23 @@
+{
+    "name": "work.a.andrey/boarding-cards-sorter",
+    "description": "Sort boarding cards for various transportations that will take you from a point A to point B via several stops on the way",
+    "require": {
+        "php": "^5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2"
+    },
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Artyushenko",
+            "email": "work.a.andrey@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    }
+}
