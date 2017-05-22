@@ -1,7 +1,6 @@
 <?php
 
 use src\App\BoardingCardFactory;
-use src\App\BoardingCardsSorter;
 use src\App\Trip;
 
 class TripTest extends PHPUnit_Framework_TestCase
@@ -53,13 +52,5 @@ class TripTest extends PHPUnit_Framework_TestCase
         $trip->addBoardingCards(self::$boardingCardsData);
 
         $this->assertArraySubset($boardingCards, $trip->getBoardingCards());
-    }
-
-    /** @test */
-    function it_has_sorter()
-    {
-        $trip = new Trip();
-
-        $this->assertInstanceOf('\src\App\Interfaces\BoardingCardsSorterInterface', $trip->sorter());
     }
 }
