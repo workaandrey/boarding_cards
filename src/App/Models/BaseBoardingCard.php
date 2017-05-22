@@ -81,7 +81,9 @@ class BaseBoardingCard implements BoardingCardInterface
      */
     public function toString()
     {
-        return $this->source . ' - ' . $this->destination;
+        $vehicleNumber = !empty($this->vehicleNumber) ? "{$this->vehicleNumber} " : '';
+        $seatInfo = empty($this->seatAssignment) ? 'No seat assignment.' : "Sit in seat {$this->seatAssignment}.";
+        return "{$this->vehicle} {$vehicleNumber}from {$this->source} to {$this->destination}. {$seatInfo}";
     }
 
 }

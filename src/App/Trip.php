@@ -87,4 +87,15 @@ class Trip
             ->sort($this->getBoardingCards());
     }
 
+    /**
+     * Print route based on sorted boarding cards
+     */
+    public function showRoute()
+    {
+        foreach ($this->sortBoardingCards() as $i => $boardingCard) {
+            echo ($i+1) ,'. ', 'Take ' . $boardingCard->toString(), PHP_EOL;
+        }
+        echo ($i+2), '. You have arrived at your final destination.';
+    }
+
 }

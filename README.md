@@ -31,6 +31,8 @@ Usage
 <?php
 require_once 'vendor/autoload.php';
 
+use src\App\Trip;
+
 $boardingCardsData = [
      [
          'vehicle' => 'airplane',
@@ -72,7 +74,10 @@ $boardingCardsData = [
 
 $trip = new Trip();
 $trip->addBoardingCards($boardingCardsData);
-$trip->sortBoardingCards();
+$route = $trip->showRoute();
+```
 
-echo $trip->toString();
+One just pass boarding cards in json format to script
+```
+php buildRoute.php '[{"vehicle":"airplane","source":"Gerona Airport","destination":"Stockholm","vehicleNumber":"SK455","seatAssignment":"3A","gate":"45B"},{"vehicle":"car","source":"Stockholm","destination":"Berlin","vehicleNumber":"","seatAssignment":""},{"vehicle":"bus","source":"Ba Airport","vehicleNumber":"","seatAssignment":""},{"vehicle":"train","source":"Berlin","destination":"Moscow","vehicleNumber":"78A","seatAssignment":"45B"},{"vehicle":"train","source":"Madrid","destination":"Barcelona","vehicleNumber":"78A","seatAssignment":"45B"}]'
 ```

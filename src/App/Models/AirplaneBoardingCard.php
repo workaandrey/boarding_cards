@@ -16,8 +16,9 @@ class AirplaneBoardingCard extends BaseBoardingCard
      * @param string $destination
      * @param string $vehicleNumber
      * @param mixed $seatAssignment
+     * @param mixed $gate
      */
-    public function __construct($vehicle, $source, $destination, $vehicleNumber = null, $seatAssignment = null, $gate = '')
+    public function __construct($vehicle, $source, $destination, $vehicleNumber = null, $seatAssignment = null, $gate = null)
     {
         parent::__construct($vehicle, $source, $destination, $vehicleNumber, $seatAssignment);
 
@@ -30,6 +31,17 @@ class AirplaneBoardingCard extends BaseBoardingCard
     public function getGate()
     {
         return $this->gate;
+    }
+
+    /**
+     * @return string
+     */
+    public function toString()
+    {
+        $vehicleNumber = !empty($this->vehicleNumber) ? "{$this->vehicleNumber} " : '';
+        $gateInfo = !empty($this->gate) ? " Gate {$this->gate}. " : "";
+        $seatInfo = empty($this->seatAssignment) ? 'No seat assignment.' : "Sit in seat {$this->seatAssignment}.";
+        return "{$this->vehicle} {$vehicleNumber}from {$this->source} to {$this->destination}. {$gateInfo}{$seatInfo}";
     }
 
 }
