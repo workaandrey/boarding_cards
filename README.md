@@ -71,7 +71,7 @@ $trip->addBoardingCards($boardingCardsData);
 $route = $trip->showRoute();
 ```
 
-One just pass boarding cards in json format to script
+Or just pass boarding cards in json format to script
 ```
 php buildRoute.php '[{"vehicle":"airplane","source":"Gerona Airport","destination":"Stockholm","vehicleNumber":"SK455","seatAssignment":"3A","gate":"45B"},{"vehicle":"car","source":"Stockholm","destination":"Berlin","vehicleNumber":"","seatAssignment":""},{"vehicle":"bus","source":"Ba Airport","vehicleNumber":"","seatAssignment":""},{"vehicle":"train","source":"Berlin","destination":"Moscow","vehicleNumber":"78A","seatAssignment":"45B"},{"vehicle":"train","source":"Madrid","destination":"Barcelona","vehicleNumber":"78A","seatAssignment":"45B"}]'
 ```
