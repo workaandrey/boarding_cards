@@ -9,8 +9,10 @@ API that lets you sort boarding cards and present back a description of how to c
 
 Installation
 ------------
+```
 $ git clone git@bitbucket.org:work_a_andrey/boarding_cards_trip.git
 $ composer install
+```
 
 Running tests
 -------------
